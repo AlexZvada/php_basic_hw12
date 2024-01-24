@@ -37,7 +37,7 @@ class ToDo
     {
         $task = $this->createTask($taskName, $priority);
         $list = $this->getList();
-        $list[] = $task;
+        $list[$task['id']] = $task;
         $this->setList($list);
     }
 
