@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  php:
+    build: ./
+    volumes:
+      - ./:/var/www/html
+      - ./xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+    ports:
+      - "8080:80"
